@@ -12,7 +12,8 @@
 
 <html>
 <head>
-    <title>검색 페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAB PLABER</title>
     <style>
         * {
             margin: 0;
@@ -24,6 +25,7 @@
             background: #f4f6f9;
             font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
             color: #333;
+            overflow-x:hidden;
         }
 
         .header {
@@ -42,9 +44,11 @@
             letter-spacing: 1px;
         }
 
-        .search-wrap {
-            width: 1200px;
-            margin: 30px auto;
+        .search-wrap,
+        .content {
+            width: min(1200px, 95%);
+            margin-left:auto;
+            margin-right:auto;
         }
 
         .search-box {
@@ -52,9 +56,9 @@
             border-radius: 12px;
             box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
             padding: 25px;
-            display: grid;
-            grid-template-columns:repeat(5, 1fr);
-            gap: 20px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+            gap:20px;
             align-items: end;
         }
 
@@ -108,11 +112,6 @@
             transform: translateY(-1px);
         }
 
-        .content {
-            width: 1200px;
-            margin: 20px auto 60px;
-        }
-
         .match-list {
             display: flex;
             flex-direction: column;
@@ -132,11 +131,46 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
         }
 
-        .card-header{
-            padding:25px;
-            display:flex;
-            justify-content:space-between;
-            align-items:flex-start;
+        @media(max-width:650px){
+
+            .card-header{
+                padding:18px;
+            }
+
+
+            .stadium{
+                font-size:18px;
+            }
+
+
+            .schedule{
+                font-size:14px;
+            }
+
+
+            .badge-wrap{
+                margin-top:15px;
+            }
+
+            .summary {
+                grid-template-columns:1fr;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .level {
+                margin-top: 15px;
+            }
+
+            .tier-table th,
+            .tier-table td {
+                display: block;
+                width: 100%;
+            }
+
         }
 
         .card-header>div:first-child{
@@ -178,8 +212,8 @@
         }
 
         .summary {
-            display: grid;
-            grid-template-columns:repeat(4, 1fr);
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
             gap: 15px;
             margin-bottom: 25px;
         }
@@ -267,26 +301,7 @@
             }
         }
 
-        @media (max-width: 650px) {
-            .summary {
-                grid-template-columns:1fr;
-            }
 
-            .card-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .level {
-                margin-top: 15px;
-            }
-
-            .tier-table th,
-            .tier-table td {
-                display: block;
-                width: 100%;
-            }
-        }
 
         .loading-mask{
             position:fixed;
@@ -496,18 +511,6 @@
     </style>
 </head>
 <body>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>PLAB PLABER</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
-
-<body>
-
 <div class="header">
     <div class="logo">⚽ PLAB PLABER</div>
 </div>
@@ -628,7 +631,7 @@
 </div>
 
 
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 
     var matchList = []; // 결과 전역

@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLAB MATCH - Login</title>
 
     <style>
@@ -21,20 +21,41 @@
             font-family:'Segoe UI','Malgun Gothic',sans-serif;
         }
 
+        html,
+        body{
+            width:100%;
+            min-height:100%;
+        }
+
         body{
             min-height:100vh;
             display:flex;
             justify-content:center;
             align-items:center;
+
+            padding:20px;
+
             background:
-                    linear-gradient(135deg,#ff6b00 0%,#ff8a3d 45%,#f4f6f9 45%,#f4f6f9 100%);
+                    linear-gradient(
+                            135deg,
+                            #ff6b00 0%,
+                            #ff8a3d 45%,
+                            #f4f6f9 45%,
+                            #f4f6f9 100%
+                    );
+
+            overflow-x:hidden;
         }
+
 
         .login-card{
 
-            width:430px;
+            width:min(430px, 100%);
+
             background:white;
+
             border-radius:22px;
+
             padding:45px;
 
             box-shadow:
@@ -42,13 +63,18 @@
 
         }
 
+
         .logo{
 
             font-size:34px;
             font-weight:bold;
+
             color:#ff6b00;
+
             text-align:center;
+
         }
+
 
         .subtitle{
 
@@ -56,39 +82,54 @@
             margin-bottom:35px;
 
             color:#777;
+
             text-align:center;
+
             font-size:15px;
+
         }
+
 
         .form-group{
 
             margin-bottom:22px;
+
         }
+
 
         .form-group label{
 
             display:block;
+
             margin-bottom:8px;
 
             font-size:14px;
+
             font-weight:bold;
+
             color:#555;
+
         }
+
 
         .form-group input{
 
             width:100%;
-            height:50px;
+
+            height:52px;
 
             border:1px solid #ddd;
+
             border-radius:12px;
 
             padding:0 18px;
 
-            font-size:15px;
+            font-size:16px;
 
             transition:.25s;
+
         }
+
 
         .form-group input:focus{
 
@@ -98,48 +139,70 @@
 
             box-shadow:
                     0 0 0 4px rgba(255,107,0,.15);
+
         }
+
 
         .option{
 
             display:flex;
+
             justify-content:space-between;
+
             align-items:center;
 
             margin-bottom:28px;
 
             font-size:14px;
+
         }
 
-        .option a{
 
-            color:#666;
-            text-decoration:none;
+        .option label{
+
+            display:flex;
+
+            align-items:center;
+
+            gap:8px;
+
         }
 
-        .option a:hover{
 
-            color:#ff6b00;
+        .option input{
+
+            width:16px;
+            height:16px;
+
+            accent-color:#ff6b00;
+
         }
+
 
         .login-btn{
 
             width:100%;
+
             height:54px;
 
             border:0;
+
             border-radius:14px;
 
             background:#ff6b00;
+
             color:white;
 
             font-size:17px;
+
             font-weight:bold;
 
             cursor:pointer;
 
             transition:.2s;
+
         }
+
 
         .login-btn:hover{
 
@@ -149,69 +212,18 @@
 
             box-shadow:
                     0 10px 20px rgba(255,107,0,.3);
+
         }
 
-        .divider{
 
-            margin:35px 0;
+        .login-btn:disabled{
 
-            position:relative;
-            text-align:center;
+            opacity:.6;
+
+            cursor:not-allowed;
+
         }
 
-        .divider:before{
-
-            content:"";
-
-            position:absolute;
-
-            left:0;
-            top:50%;
-
-            width:100%;
-            height:1px;
-
-            background:#eee;
-        }
-
-        .divider span{
-
-            position:relative;
-
-            background:white;
-
-            padding:0 15px;
-
-            color:#999;
-            font-size:13px;
-        }
-
-        .signup-btn{
-
-            width:100%;
-            height:52px;
-
-            border:2px solid #ff6b00;
-
-            border-radius:14px;
-
-            background:white;
-
-            color:#ff6b00;
-
-            font-size:16px;
-            font-weight:bold;
-
-            cursor:pointer;
-
-            transition:.2s;
-        }
-
-        .signup-btn:hover{
-
-            background:#ff6b00;
-            color:white;
-        }
 
         .footer{
 
@@ -220,15 +232,62 @@
             text-align:center;
 
             color:#999;
+
             font-size:13px;
+
         }
+
 
         @media(max-width:500px){
 
+            body{
+
+                padding:15px;
+
+                background:
+                        linear-gradient(
+                                160deg,
+                                #ff6b00 0%,
+                                #ff8a3d 35%,
+                                #f4f6f9 35%
+                        );
+
+            }
+
+
             .login-card{
 
-                width:92%;
-                padding:35px 28px;
+                width:100%;
+
+                padding:35px 25px;
+
+                border-radius:18px;
+
+            }
+
+
+            .logo{
+
+                font-size:28px;
+
+            }
+
+
+            .subtitle{
+
+                font-size:14px;
+
+                margin-bottom:28px;
+
+            }
+
+
+            .login-btn{
+
+                height:50px;
+
+                font-size:16px;
+
             }
 
         }
@@ -373,7 +432,7 @@
             });
 
             // 비밀번호 보기
-            $("#btnShowPassword").on("click", function () {
+           /* $("#btnShowPassword").on("click", function () {
 
                 const pw = $("#password");
 
@@ -389,7 +448,7 @@
 
                 }
 
-            });
+            });*/
 
         },
 
