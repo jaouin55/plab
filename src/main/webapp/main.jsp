@@ -133,10 +133,6 @@
 
         @media(max-width:650px){
 
-            .card-header{
-                padding:18px;
-            }
-
 
             .stadium{
                 font-size:18px;
@@ -156,11 +152,6 @@
                 grid-template-columns:1fr;
             }
 
-            .card-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
             .level {
                 margin-top: 15px;
             }
@@ -171,6 +162,12 @@
                 width: 100%;
             }
 
+        }
+
+        .card-header{
+            padding:18px;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .card-header>div:first-child{
@@ -424,6 +421,7 @@
             display:flex;
             gap:8px;
             align-items:center;
+            width:97%;
         }
 
         .result-header{
