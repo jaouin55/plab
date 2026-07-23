@@ -421,7 +421,8 @@
             display:flex;
             gap:8px;
             align-items:center;
-            width:97%;
+            margin-top: 15px;
+            justify-content: end;
         }
 
         .result-header{
