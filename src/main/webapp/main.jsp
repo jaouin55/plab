@@ -29,8 +29,8 @@
         }
 
         .header {
-            height: 70px;
-            background: #ff6b00;
+            height: 60px;
+            background: linear-gradient(45deg, black, transparent);
             color: #fff;
             display: flex;
             align-items: center;
@@ -99,7 +99,7 @@
             height: 42px;
             border: 0;
             border-radius: 8px;
-            background: #ff6b00;
+            background: black;
             color: white;
             font-size: 15px;
             font-weight: bold;
@@ -260,19 +260,19 @@
 
         .empty-box {
             background: white;
-            padding: 80px;
+            padding: 50px;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
         }
 
         .empty-icon {
-            font-size: 70px;
+            font-size: 50px;
         }
 
         .empty-title {
             margin-top: 20px;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: bold;
         }
 
