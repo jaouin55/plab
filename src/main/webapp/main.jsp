@@ -144,7 +144,9 @@
 
 
             .schedule{
-                font-size:14px;
+                font-size:20px;
+                font-family: "Cambria Math";
+                color:darkolivegreen;
             }
 
 
@@ -187,9 +189,10 @@
         }
 
         .schedule {
-            margin-top: 8px;
-            color: #333333;
-            font-size: 16px;
+            margin-top: 15px;
+            color: darkolivegreen;
+            font-size: 20px;
+            font-family: "Cambria Math";
         }
 
         .level {
@@ -220,10 +223,11 @@
         }
 
         .summary-item {
-            background: orangered;
+            background: #f4f6f9;
             border-radius: 10px;
             padding: 15px;
             text-align: center;
+            color:orangered;
         }
 
         .summary-item .title {
@@ -396,11 +400,13 @@
             color:cornflowerblue;
             text-decoration:none;
             font-weight:bold;
+            font-size: 20px;
         }
 
         .match-link:hover{
             color:#0d47a1;
             text-decoration:underline;
+            font-size: 20px;
         }
 
         .woman-badge{
@@ -496,19 +502,19 @@
         }
 
         .beginner{
-            background:#f1c40f;
+            background:darkorange;
         }
 
         .amateur{
-            background:#2196F3;
+            background:cornflowerblue;
         }
 
         .semipro{
-            background:#e74c3c;
+            background:crimson;
         }
 
         .pro{
-            background:#8e44ad;
+            background:violet;
         }
 
     </style>
@@ -874,12 +880,12 @@
                 '</div>' +
 
                 '<div class="summary-item">' +
-                '<div class="title">Match ID</div>' +
+                '<div class="title">Plab Match</div>' +
                 '<div class="value">' +
                 '<a href="https://www.plabfootball.com/match/' +
                 item.MATCH_ID +
                 '" target="_blank" class="match-link">' +
-                '🔗 ' + item.MATCH_ID +
+                '바로 가기' +
                 '</a>' +
                 '</div>' +
                 '</div>' +
