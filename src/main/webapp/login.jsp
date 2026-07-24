@@ -38,8 +38,8 @@
             background:
                     linear-gradient(
                             135deg,
-                            #ff6b00 0%,
-                            #ff8a3d 45%,
+                            #333 0%,
+                            #333 45%,
                             #f4f6f9 45%,
                             #f4f6f9 100%
                     );
@@ -65,14 +65,10 @@
 
 
         .logo{
-
             font-size:34px;
             font-weight:bold;
-
-            color:#ff6b00;
-
+            color:#333333;
             text-align:center;
-
         }
 
 
@@ -174,7 +170,7 @@
             width:16px;
             height:16px;
 
-            accent-color:#ff6b00;
+            accent-color:#333;
 
         }
 
@@ -189,7 +185,7 @@
 
             border-radius:14px;
 
-            background:#ff6b00;
+            background:#333;
 
             color:white;
 
@@ -206,12 +202,13 @@
 
         .login-btn:hover{
 
-            background:#f25f00;
+            background:#f4f6f9;
+            color:#333333;
 
             transform:translateY(-2px);
 
             box-shadow:
-                    0 10px 20px rgba(255,107,0,.3);
+                    0 10px 20px rgba(0,0,0,.3);
 
         }
 
@@ -358,7 +355,7 @@
 
     <div class="footer">
 
-        © 2026 PLAB MATCH
+        © 2026 PLAB MATCH [ SeongKyuOh ]
 
     </div>
 

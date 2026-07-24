@@ -35,13 +35,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 25px;
             font-weight: bold;
             box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+            margin-bottom: 20px;
         }
 
         .logo {
-            letter-spacing: 1px;
+            letter-spacing: 5px;
         }
 
         .search-wrap,
@@ -99,8 +100,8 @@
             height: 42px;
             border: 0;
             border-radius: 8px;
-            background: black;
-            color: white;
+            background: #666666;
+            color: #f4f6f9;
             font-size: 15px;
             font-weight: bold;
             cursor: pointer;
@@ -108,8 +109,11 @@
         }
 
         .search-btn:hover {
-            background: #ea5e00;
-            transform: translateY(-1px);
+            background: #333333;
+            color:#ffffff;
+            transform:translateY(-1px);
+            box-shadow:
+                    0 5px 5px rgba(0,0,0,.1);
         }
 
         .match-list {
@@ -216,7 +220,7 @@
         }
 
         .summary-item {
-            background: #fafafa;
+            background: orangered;
             border-radius: 10px;
             padding: 15px;
             text-align: center;
@@ -231,7 +235,7 @@
             margin-top: 8px;
             font-size: 22px;
             font-weight: bold;
-            color: #ff6b00;
+            color: lightcoral;
         }
 
         .tier-table {
@@ -389,7 +393,7 @@
         }
 
         .match-link{
-            color:#1976d2;
+            color:cornflowerblue;
             text-decoration:none;
             font-weight:bold;
         }
@@ -856,14 +860,14 @@
                 '</div>' +
 
                 '<div class="summary-item">' +
-                '<div class="title">확정 인원</div>' +
+                '<div class="title">확정 인원 [ROOKIE 포함]</div>' +
                 '<div class="value">' +
                 item.CONFIRM_COUNT + '명' +
                 '</div>' +
                 '</div>' +
 
                 '<div class="summary-item">' +
-                '<div class="title">ROOKIE</div>' +
+                '<div class="title">ROOKIE 인원</div>' +
                 '<div class="value">' +
                 item["ROOKIE[BATCH]"] + '명' +
                 '</div>' +
